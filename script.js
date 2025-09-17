@@ -849,7 +849,7 @@ const products = {
             "img/ARETES/Fragole Amore_1.png",
             "img/ARETES/Fragole Amore_2.png"
         ],
-        image: "img/ARETES/FRAGOLE Amore_1.png",
+        image: "img/ARETES/Fragole Amore_1.png",
         description: "Románticos aretes con forma de corazón. Perfectos para expresar amor y dulzura."
     },
     { 
@@ -864,7 +864,7 @@ const products = {
             "img/ARETES/Fragole Onde_1.png"
             
         ],
-        image: "img/FRAGOLE Onde.jpeg",
+        image: "img/Fragole Onde.jpeg",
         description: "Delicados aretes con forma de onda. Acero inoxidable" 
     },
     { 
@@ -972,7 +972,7 @@ const products = {
             "img/ARETES/Fragole perla Oceano_1.jpeg",
             "img/ARETES/Fragole perla Oceano_2.jpeg"
         ],
-        image: "img/ARETES/Fragole Perla Oceano.jpeg",
+        image: "img/ARETES/Fragole perla Oceano.jpeg",
         description: "Delicados aretes con perlas. Perfectos para un look romántico y femenino. Acero Inoxidable" 
     },
     { 
