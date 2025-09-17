@@ -308,7 +308,7 @@ button#hamburger-btn,
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-.card-category:nth-child(1) { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/Portada_Arete.jpeg'); background-size: cover; background-position: center; }
+.card-category:nth-child(1) { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/portada_Arete.jpeg'); background-size: cover; background-position: center; }
 .card-category:nth-child(2) { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/Portada_anillos.jpeg'); background-size: cover; background-position: center; }
 .card-category:nth-child(3) { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/Portada_Collares.jpeg'); background-size: cover; background-position: center; }
 .card-category:hover { transform: translateY(-1rem); }
