@@ -1,0 +1,299 @@
+<!DOCTYPE html>  
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+   <meta name="format-detection" content="telephone=no">
+   <title>FRAGOLE - Joyería</title>
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+   <header>
+       <div class="container-hero">
+           <!-- Centrado del logo + título -->
+           <div class="container hero" style="display:flex; justify-content:center; align-items:center; padding:2rem 0;">
+               <div class="container-logo" style="display:flex; align-items:center; gap:0.5rem;">
+                   <i class="fa-solid fa-gem" style="font-size: 4rem; color: var(--primary-color);"></i>
+                   <h1 class="logo" style="margin:0;">
+                       <a href="#" onclick="showHome()" style="text-decoration:none; color:#000;">FRAGOLE</a>
+                   </h1>
+               </div>
+           </div>
+       </div>
+
+       <div class="container-navbar">
+           <nav class="navbar container">
+               <!-- NUEVO: Lado izquierdo con hamburguesa + menú -->
+               <div class="navbar-left">
+                   <!-- Botón hamburguesa dentro de la navbar -->
+                   <button class="hamburger-btn" aria-label="Abrir menú" title="Menú" onclick="toggleDrawer(true)">
+                     <span></span><span></span><span></span>
+                   </button>
+
+                   <!-- Menú tradicional (se oculta en móvil) -->
+                   <ul class="menu" style="display:flex; align-items:center; gap:1rem; margin:0; padding:0; list-style:none;">
+                       <li><a href="#" onclick="showHome()" style="touch-action: manipulation;">Inicio</a></li>
+                       <li><a href="#" onclick="showAllProducts()" style="touch-action: manipulation;">Todos los Productos</a></li>
+                   </ul>
+               </div>
+
+               <!-- Derecha de la barra: buscador + carrito -->
+               <div class="navbar-right" style="margin-left:auto; display:flex; align-items:center; gap:0.75rem;">
+                   <form class="search-form" style="display:flex; align-items:center; gap:0;">
+                       <input type="search" 
+                              placeholder="Buscar..." 
+                              autocomplete="off"
+                              autocorrect="off"
+                              spellcheck="false" />
+                       <button type="submit" class="btn-search" style="touch-action: manipulation; padding:.4rem;">
+                           <i class="fa-solid fa-magnifying-glass"></i>
+                       </button>
+                   </form>
+
+                   <button type="button"
+                           onclick="showCart()"
+                           aria-label="Ver carrito de compras"
+                           title="Carrito"
+                           class="cart-icon-btn"
+                           style="background:none; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0.25rem;">
+                       <i class="fa-solid fa-basket-shopping" style="font-size:2.2rem; line-height:1; color:#fff;"></i>
+                   </button>
+               </div>
+           </nav>
+       </div>
+   </header>
+
+   <!-- Drawer lateral + overlay -->
+   <aside id="drawer-categorias" class="side-drawer" aria-hidden="true">
+     <div class="drawer-header">
+       <span>Menú</span>
+       <button id="drawer-close" type="button" aria-label="Cerrar">✕</button>
+     </div>
+
+     <!-- Enlaces superiores: Inicio, Mostrar Todo, Sobre Nosotros -->
+     <nav class="drawer-top-links">
+       <a href="#" onclick="toggleDrawer(false); showHome()">Inicio</a>
+       <a href="#" onclick="toggleDrawer(false); showAllProducts()">Mostrar todo</a>
+       <a href="#sobre-nosotros" onclick="toggleDrawer(false); showHome(); setTimeout(()=>document.getElementById('sobre-nosotros').scrollIntoView({behavior:'smooth'}), 0)">Sobre Nosotros</a>
+     </nav>
+
+     <div class="drawer-divider"></div>
+     <div class="drawer-section-title">Categorías</div>
+
+     <!-- Categorías -->
+     <nav class="drawer-list">
+       <a href="#" onclick="showCategory('aretes'); toggleDrawer(false)">Aretes</a>
+       <a href="#" onclick="showCategory('argollas'); toggleDrawer(false)">Argollas</a>
+       <a href="#" onclick="showCategory('pulseras'); toggleDrawer(false)">Pulseras</a>
+       <a href="#" onclick="showCategory('collares'); toggleDrawer(false)">Collares</a>
+     </nav>
+   </aside>
+   <div id="drawer-overlay" class="drawer-overlay" onclick="toggleDrawer(false)"></div>
+
+   <!-- HOME VIEW -->
+   <div id="home-view">
+       <section class="banner">
+           <div class="content-banner">
+               <p>FRAGOLE</p>
+               <h2>Acero Inoxidable<br /> y chapados en oro</h2>
+               <a href="#" onclick="showAllProducts()">Comprar ahora</a>
+           </div>
+       </section>
+
+       <main class="main-content">
+           <section class="container container-features">
+               <div class="card-feature">
+                   <i class="fa-solid fa-plane-up"></i>
+                   <div class="feature-content">
+                       <span>Envíos a nivel Nacional</span>
+                       <p>Consultar los envíos al número de WhatsApp</p>
+                   </div>
+               </div>
+               <div class="card-feature">
+                   <i class="fa-solid fa-wallet"></i>
+                   <div class="feature-content">
+                       <span>Aceptamos pagos en Efectivo y QR</span>
+                       <p>Consulta tu método de pago</p>
+                   </div>
+               </div>
+               <div class="card-feature">
+                   <i class="fa-solid fa-gift"></i>
+                   <div class="feature-content">
+                       <span>Tarjeta de descuentos</span>
+                       <p>¡Por cada compra te acercas a más descuentos!</p>
+                   </div>
+               </div>
+               <div class="card-feature">
+                   <i class="fa-solid fa-headset"></i>
+                   <div class="feature-content">
+                       <span>Envía tu pedido, atención 24/7</span>
+                       <p>Envíanos tu pedido al 63318978 </p>
+                   </div>
+               </div>
+           </section>
+
+           <section class="container top-categories">
+               <h1 class="heading-1">Mejores Categorías</h1>
+               <div class="container-categories">
+                   <div class="card-category" onclick="showCategory('aretes')">
+                       <p>ARETES</p>
+                       <span>Ver más</span>
+                   </div>
+                   <div class="card-category" onclick="showCategory('argollas')">
+                       <p>ARGOLLAS</p>
+                       <span>Ver más</span>
+                   </div>
+                   <div class="card-category" onclick="showCategory('collares')">
+                       <p>COLLARES</p>
+                       <span>Ver más</span>
+                   </div>
+               </div>
+           </section>
+
+           <section class="container">
+               <h1 class="heading-1">Productos Destacados</h1>
+               <div class="container-products" id="featured-products">
+                   <!-- Los productos se cargarán aquí mediante JavaScript -->
+               </div>
+           </section>
+
+           <section class="container">
+               <h1 class="heading-1">OFERTAS</h1>
+               <div class="container-products" id="offers-products">
+                   <!-- Los productos en oferta se cargarán aquí mediante JavaScript -->
+               </div>
+           </section>
+
+           <!-- Sección Sobre Nosotros -->
+           <section class="container" id="sobre-nosotros" style="margin-top:4rem;">
+               <h1 class="heading-1">Sobre Nosotros</h1>
+               <p style="font-size:1.6rem; line-height:1.7; color:#555; max-width:80rem; margin:0 auto; text-align:center;">
+                 En <strong>FRAGOLE</strong> combinamos diseño y calidad en joyería de acero inoxidable y aretes chapados en oro.
+                 Nuestro objetivo es ofrecer piezas atemporales a precios accesibles, con atención cercana y envíos a todo el país.
+                 Somos una tienda Online que realiza envios en todo el país.
+               </p>
+           </section>
+       </main>
+   </div>
+
+   <!-- CATEGORY VIEW -->
+   <div id="category-view" class="hidden">
+       <main class="main-content">
+           <div class="container">
+               <div class="breadcrumb">
+                   <a href="#" onclick="showHome()">Inicio</a>
+                   <span>></span>
+                   <span id="category-breadcrumb">Categoría</span>
+               </div>
+               
+               <h1 class="heading-1" id="category-title">Productos</h1>
+               
+               <div class="container-products" id="category-products">
+                   <!-- Los productos de la categoría se cargarán aquí -->
+               </div>
+           </div>
+       </main>
+   </div>
+
+   <!-- PRODUCT DETAIL VIEW -->
+   <div id="product-view" class="hidden">
+       <main class="main-content">
+           <div class="container">
+               <div class="breadcrumb">
+                   <a href="#" onclick="showHome()">Inicio</a>
+                   <span>></span>
+                   <a href="#" onclick="goBackToCategory()" id="product-category-link">Categoría</a>
+                   <span>></span>
+                   <span id="product-breadcrumb">Producto</span>
+               </div>
+               
+               <div class="product-detail">
+                   <div class="product-images">
+                       <div class="main-image" id="product-main-image">
+                           <!-- Imagen principal del producto -->
+                       </div>
+                   </div>
+                   
+                   <div class="product-info">
+                       <h1 id="product-title">Nombre del Producto</h1>
+                       <div class="stars" id="product-stars">
+                           <!-- Estrellas de valoración -->
+                       </div>
+                       <div class="price" id="product-price">Precio</div>
+                       <p id="product-description">Descripción del producto</p>
+                       
+                       <div>
+                           <button class="btn-primary">Agregar al Carrito</button>
+                           <a href="#" class="btn-secondary" onclick="goBackToCategory()">Volver</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </main>
+   </div>
+
+   <footer class="footer">
+       <div class="container">
+           <div class="container-footer">
+               <div>
+                   <h3>Información de Contacto</h3>
+                   <ul>
+                       <li>Dirección: Somos una tienda Online</li>
+                       <li>Teléfono: 63318978</li>
+                       <li>También contáctate al: 63318978</li>
+                       <li>Email: cnotaci@gmail.com</li>
+                   </ul>
+                   <div class="social-icons">
+                       <span class="facebook"><i class="fa-brands fa-facebook-f"></i></span>
+                       <span class="twitter"><i class="fa-brands fa-twitter"></i></span>
+                       <span class="instagram"><i class="fa-brands fa-instagram"></i></span>
+                   </div>
+               </div>
+               
+               <div>
+                   <h3>Redes Sociales</h3>
+                   <ul>
+                       <li><a href="#sobre-nosotros" onclick="showHome(); setTimeout(()=>document.getElementById('sobre-nosotros').scrollIntoView({behavior:'smooth'}), 0)">Acerca de Nosotros</a></li>
+                       <li><a href="#">instagram: Fragolr_sc</a></li>
+                       <li><a href="#">Facebook: Fragole Santa Cruz</a></li>
+                       <li><a href="#">tik tok: @fragole50 </a></li>
+                       <li><a href="#">WhatsApp: 63318978</a></li>
+                   </ul>
+               </div>
+               
+               
+           </div>
+           
+           <div class="copyright">
+               <p>&copy; 2024 FRAGOLE. Todos los derechos reservados.</p>
+           </div>
+       </div>
+   </footer>
+
+   <!-- JS mínimo para el drawer -->
+   <script>
+     function toggleDrawer(open){
+       const drawer = document.getElementById('drawer-categorias');
+       const overlay = document.getElementById('drawer-overlay');
+       const willOpen = (typeof open === 'boolean') ? open : !drawer.classList.contains('open');
+       if(willOpen){
+         drawer.classList.add('open'); overlay.classList.add('show');
+         document.body.style.overflow = 'hidden';
+         drawer.setAttribute('aria-hidden','false');
+       }else{
+         drawer.classList.remove('open'); overlay.classList.remove('show');
+         document.body.style.overflow = '';
+         drawer.setAttribute('aria-hidden','true');
+       }
+     }
+     document.addEventListener('DOMContentLoaded', () => {
+       const closeBtn = document.getElementById('drawer-close');
+       closeBtn && closeBtn.addEventListener('click', ()=>toggleDrawer(false));
+       document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') toggleDrawer(false); });
+     });
+   </script>
+
+   <script src="script.js"></script>
+</body>
+</html>
