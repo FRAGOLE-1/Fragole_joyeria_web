@@ -850,7 +850,7 @@ const products = {
             "img/ARETES/Fragole Amore_2.png"
         ],
         image: "img/ARETES/Fragole Amore_1.png",
-        description: "Románticos aretes con forma de corazón. Perfectos para expresar amor y dulzura."
+        description: "Románticos aretes con forma de corazón. Perfectos para expresar amor y dulzura. Acero Inoxidable"
     },
     { 
         id: 3, 
@@ -1221,7 +1221,7 @@ const products = {
             "img/ARETES/Fragole Eleganza_1.jpeg"
         ],
         image: "img/ARETES/Fragole Eleganza.png",
-        description: "Elegantes aretes en forma de gota que alarga el cuello Largo:3,6 cm. Clásicos y sofisticados." 
+        description: "Elegantes aretes en forma de gota que alarga el cuello Largo:3,6 cm. Clásicos y sofisticados. Acero inoxidable" 
     },
     { 
         id: 28, 
@@ -1265,7 +1265,7 @@ const products = {
 
         ],
         image: "img/ARETES/Fragole Crescent Aura.png",
-        description: "Elegantes aretes en forma de argolla gruesa clasica. Clásicos y sofisticados." 
+        description: "Elegantes aretes en forma de argolla gruesa clasica. Clásicos y sofisticados. Acero inoxidable" 
     },
    
     { 
@@ -1317,7 +1317,7 @@ const products = {
             "img/anillos/Anillo Eslabon_1.jpeg"
         ],
         image:"img/anillos/Anillo Eslabon.jpeg",
-        description: "TALLA 17." 
+        description: "TALLA 17. Acero Inoxidable" 
         },
 
         { 
@@ -1332,7 +1332,7 @@ const products = {
             "img/anillos/Anillo Sirena_1.jpeg"
         ],
         image:"img/anillos/Anillo Sirena.jpeg",
-        description: "TALLA 18." 
+        description: "TALLA 18. Acero Inoxidable" 
         },
 
         { 
@@ -1346,7 +1346,7 @@ const products = {
             "img/anillos/Anillo Eslabon Plateado.jpeg"
         ],
         image:"img/anillos/Anillo Eslabon Plateado.jpeg",
-        description: "TALLA 16." 
+        description: "TALLA 16.Acero Inoxidable" 
         },
     ],
     
@@ -1365,7 +1365,7 @@ const products = {
             "img/PULSERA_SOULT OUT.jpeg",
         ],
         image:"img/PULSERA_SOULT OUT.jpeg",
-        description: "Elegantes pulsera con perlas. Clásicos y sofisticados." 
+        description: "Elegantes pulsera con perlas. Clásicos y sofisticados. Acero Inoxidable" 
         },
         { 
         id: 37, 
@@ -1398,7 +1398,7 @@ const products = {
 
         ],
         image: "img/COLLARES/Collar bioquimico.jpeg",
-        description: "Elegantes collar con dije de quimicos." 
+        description: "Elegantes collar con dije de quimicos. Acero Inoxidable" 
         },
 
         { 
@@ -1428,7 +1428,7 @@ const products = {
             "img/COLLARES/Fragole Angel_1.jpeg",
         ],
         image:  "img/COLLARES/Fragole Angel.jpeg",
-        description: "Elegantes aretes en forma de Angel. Clásicos y sofisticados." 
+        description: "Elegantes aretes en forma de Angel. Clásicos y sofisticados. Acero Inoxidable" 
         },
 
         { 
