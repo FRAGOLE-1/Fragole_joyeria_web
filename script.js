@@ -180,17 +180,7 @@ function performSearch(query) {
 
 // ===== FUNCIONES DE OPTIMIZACIÓN =====
 
-// Prevenir zoom accidental en iOS
-function preventDoubleZoom() {
-    var lastTouchEnd = 0;
-    document.addEventListener('touchend', function (event) {
-        var now = (new Date()).getTime();
-        if (now - lastTouchEnd <= 300) {
-            event.preventDefault();
-        }
-        lastTouchEnd = now;
-    }, false);
-}
+
 
 // Mejorar performance en dispositivos móviles
 function optimizePerformance() {
@@ -687,17 +677,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 200);
     });
     
-    // Prevenir zoom accidental en iOS
-    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-        var lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, { passive: false });
-    }
+    // Prevenir zoom accidental en iOS** ya no se usa, pero es una guia el mensaje
+    
+    // Prevenir doble-tap zoom sin romper el gesto "atrás"
+if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+  let lastTouchEnd = 0;
+  document.addEventListener('touchend', function () {
+    lastTouchEnd = Date.now();
+  }, { passive: true }); // ✅
+}
+
     
     // Optimizar performance en móviles
     if (isMobile) {

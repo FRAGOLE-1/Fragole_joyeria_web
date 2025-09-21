@@ -639,8 +639,9 @@ button#hamburger-btn,
     transition: all .25s ease;
     z-index: 11000;
     backdrop-filter: blur(2px);
+    pointer-events: none;  
 }
-.drawer-overlay.show { opacity: 1; visibility: visible; }
+.drawer-overlay.show { opacity: 1; visibility: visible; pointer-events: auto;     }
 
 /* ===== RESPONSIVE ===== */
 
@@ -648,7 +649,7 @@ button#hamburger-btn,
 @media (max-width: 480px) {
     html { font-size: 50%; }
     .navbar::before { font-size: 3.2rem; letter-spacing: 1px; text-shadow: 0 2px 12px rgba(0,0,0,.18); }
-    .container { padding: 0 1rem; }
+    .container { padding: 0 2rem; }
     .navbar { padding: 1.2rem 0; gap: 1rem; }
 
     .hamburger-btn { min-width: 40px; min-height: 40px; padding: 6px; }
@@ -715,7 +716,7 @@ button#hamburger-btn,
 }
 
 /* Móviles muy pequeños (iPhone SE y <375px) */
-@media (max-width: 374px) {
+@media (max-width: 480px) {
     html { font-size: 45%; }
     .container-products { grid-template-columns: 1fr 1fr; gap: 1rem; }
     .card-product { padding: 1rem; }
@@ -963,4 +964,16 @@ button#hamburger-btn,
     max-height: 350px !important;
   }
   #product-main-image{ margin-bottom: 2.2rem !important; }
+}
+/* ——— Touch/gestos globales ——— */
+html, body {
+  touch-action: auto;
+  overscroll-behavior: auto;
+}
+
+/* ——— Área táctil del carrusel/slider ——— */
+.product-image-carousel .carousel-container,
+.product-image-carousel .carousel-track,
+.slider, .carousel {
+  touch-action: pan-y;   /* respeta scroll vertical y no pelea con el “back” del borde */
 }
