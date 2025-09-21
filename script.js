@@ -180,7 +180,17 @@ function performSearch(query) {
 
 // ===== FUNCIONES DE OPTIMIZACIÓN =====
 
-
+// Prevenir zoom accidental en iOS
+function preventDoubleZoom() {
+    var lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false);
+}
 
 // Mejorar performance en dispositivos móviles
 function optimizePerformance() {
@@ -677,16 +687,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 200);
     });
     
-    // Prevenir zoom accidental en iOS** ya no se usa, pero es una guia el mensaje
-    
-    // Prevenir doble-tap zoom sin romper el gesto "atrás"
-if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-  let lastTouchEnd = 0;
-  document.addEventListener('touchend', function () {
-    lastTouchEnd = Date.now();
-  }, { passive: true }); // ✅
-}
-
+    // Prevenir zoom accidental en iOS
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        var lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, { passive: false });
+    }
     
     // Optimizar performance en móviles
     if (isMobile) {
@@ -835,11 +846,11 @@ const products = {
         originalPrice: 70,// el precio original sin el descuento
         discount: 10, // para que salgan los descuentos en las imagenes
         images: [
-            "img/ARETES/Fragole Amore_1.png",
-            "img/ARETES/Fragole Amore_2.png"
+            "img/ARETES/FRAGOLE Amore_1.png",
+            "img/ARETES/FRAGOLE Amore_2.png",
         ],
-        image: "img/ARETES/Fragole Amore_1.png",
-        description: "Románticos aretes con forma de corazón. Perfectos para expresar amor y dulzura. Acero Inoxidable"
+        image: "img/ARETES/FRAGOLE Onde.png",
+        description: "Románticos aretes con forma de corazón. Perfectos para expresar amor y dulzura."
     },
     { 
         id: 3, 
@@ -849,11 +860,11 @@ const products = {
         originalPrice: 76,// el precio original sin el descuento
         discount: 10, // para que salgan los descuentos en las imagenes
         images: [
-            "img/ARETES/Fragole Onde.jpeg",
-            "img/ARETES/Fragole Onde_1.png"
+            "img/ARETES/FRAGOLE Onde.jpeg",
+            "img/ARETES/FRAGOLE Onde_1.png",
             
         ],
-        image: "img/Fragole Onde.jpeg",
+        image: "img/FRAGOLE Onde.jpeg",
         description: "Delicados aretes con forma de onda. Acero inoxidable" 
     },
     { 
@@ -957,11 +968,11 @@ const products = {
         originalPrice: 70,// el precio original sin el descuento
         discount: 10, // para que salgan los descuentos en las imagenes
         images: [
-            "img/ARETES/Fragole perla Oceano.jpeg",
-            "img/ARETES/Fragole perla Oceano_1.jpeg",
-            "img/ARETES/Fragole perla Oceano_2.jpeg"
+            "img/ARETES/Fragole Perla Oceano.jpeg",
+            "img/ARETES/Fragole Perla Oceano_1.jpeg",
+            "img/ARETES/Fragole Perla Oceano_2.jpeg"
         ],
-        image: "img/ARETES/Fragole perla Oceano.jpeg",
+        image: "img/ARETES/Fragole Perla Oceano.jpeg",
         description: "Delicados aretes con perlas. Perfectos para un look romántico y femenino. Acero Inoxidable" 
     },
     { 
@@ -976,7 +987,7 @@ const products = {
             "img/ARETES/Fragole chic_1.png",
             "img/ARETES/Fragole chic_2.png"
         ],
-        image: "img/ARETES/Fragole chic.jpeg",
+        image: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%23f0f0f0' width='300' height='300'/><polygon points='150,110 160,140 190,140 170,160 180,190 150,170 120,190 130,160 110,140 140,140' fill='%23c4a484'/><text x='150' y='250' text-anchor='middle' font-size='16' fill='%23666'>Estrella</text></svg>",
         description: "Aretes con forma de corbata que brillan con cada movimiento. Acero inoxidable." 
     },
     { 
@@ -991,7 +1002,7 @@ const products = {
             "img/ARETES/Fragole Natura_2.jpeg",
             "img/ARETES/Fragole Natura_3.jpeg"
         ],
-        image: "img/ARETES/Fragole Natura.jpeg",
+        image: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%23f0f0f0' width='300' height='300'/><ellipse cx='150' cy='150' rx='25' ry='40' fill='%23c4a484'/><text x='150' y='250' text-anchor='middle' font-size='16' fill='%23666'>Gota</text></svg>",
         description: "Elegantes aretes en forma de hojao. Clásicos y sofisticados. Xuping Bañado en Oro" 
     },
     { 
@@ -1095,7 +1106,7 @@ const products = {
             "img/ARETES/Fragole Fiocco.jpeg",
             "img/ARETES/Fragole Ficco_1.jpeg"
         ],
-        image: "img/ARETES/Fragole Fiocco_2.jpeg",
+        image: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%23f0f0f0' width='300' height='300'/><ellipse cx='150' cy='150' rx='25' ry='40' fill='%23c4a484'/><text x='150' y='250' text-anchor='middle' font-size='16' fill='%23666'>Gota</text></svg>",
         description: "Elegantes aretes en forma moño nacar blanco. Acero inoxidable." 
     },
     { 
@@ -1210,7 +1221,7 @@ const products = {
             "img/ARETES/Fragole Eleganza_1.jpeg"
         ],
         image: "img/ARETES/Fragole Eleganza.png",
-        description: "Elegantes aretes en forma de gota que alarga el cuello Largo:3,6 cm. Clásicos y sofisticados. Acero inoxidable" 
+        description: "Elegantes aretes en forma de gota que alarga el cuello Largo:3,6 cm. Clásicos y sofisticados." 
     },
     { 
         id: 28, 
@@ -1254,7 +1265,7 @@ const products = {
 
         ],
         image: "img/ARETES/Fragole Crescent Aura.png",
-        description: "Elegantes aretes en forma de argolla gruesa clasica. Clásicos y sofisticados. Acero inoxidable" 
+        description: "Elegantes aretes en forma de argolla gruesa clasica. Clásicos y sofisticados." 
     },
    
     { 
@@ -1306,7 +1317,7 @@ const products = {
             "img/anillos/Anillo Eslabon_1.jpeg"
         ],
         image:"img/anillos/Anillo Eslabon.jpeg",
-        description: "TALLA 17. Acero Inoxidable" 
+        description: "TALLA 17." 
         },
 
         { 
@@ -1321,7 +1332,7 @@ const products = {
             "img/anillos/Anillo Sirena_1.jpeg"
         ],
         image:"img/anillos/Anillo Sirena.jpeg",
-        description: "TALLA 18. Acero Inoxidable" 
+        description: "TALLA 18." 
         },
 
         { 
@@ -1335,7 +1346,7 @@ const products = {
             "img/anillos/Anillo Eslabon Plateado.jpeg"
         ],
         image:"img/anillos/Anillo Eslabon Plateado.jpeg",
-        description: "TALLA 16.Acero Inoxidable" 
+        description: "TALLA 16." 
         },
     ],
     
@@ -1354,7 +1365,7 @@ const products = {
             "img/PULSERA_SOULT OUT.jpeg",
         ],
         image:"img/PULSERA_SOULT OUT.jpeg",
-        description: "Elegantes pulsera con perlas. Clásicos y sofisticados. Acero Inoxidable" 
+        description: "Elegantes pulsera con perlas. Clásicos y sofisticados." 
         },
         { 
         id: 37, 
@@ -1387,7 +1398,7 @@ const products = {
 
         ],
         image: "img/COLLARES/Collar bioquimico.jpeg",
-        description: "Elegantes collar con dije de quimicos. Acero Inoxidable" 
+        description: "Elegantes collar con dije de quimicos." 
         },
 
         { 
@@ -1417,7 +1428,7 @@ const products = {
             "img/COLLARES/Fragole Angel_1.jpeg",
         ],
         image:  "img/COLLARES/Fragole Angel.jpeg",
-        description: "Elegantes aretes en forma de Angel. Clásicos y sofisticados. Acero Inoxidable" 
+        description: "Elegantes aretes en forma de Angel. Clásicos y sofisticados." 
         },
 
         { 
@@ -1867,7 +1878,7 @@ function generateProductHTML(product, showAddToCart) {
     ? '<span class="add-cart" onclick="event.stopPropagation(); addToCart(' + product.id + ', 1)"><i class="fa-solid fa-basket-shopping"></i></span>'
     : '';
 
-  return '<div class="card-product" onclick="location.hash=\'#/producto/' + product.id + '\'">' +
+  return '<div class="card-product" onclick="showProduct(' + product.id + ')">' +
     '<div class="container-img">' +
       '<img src="' + imgSrc + '" alt="' + product.name + '" loading="lazy" decoding="async" />' +
       discountHTML +
@@ -2060,12 +2071,11 @@ function showProduct(productId) {
     var pv = document.getElementById('product-view');
     if (pv) pv.classList.remove('hidden');
     
-var pcl = document.getElementById('product-category-link');
-if (pcl) {
-  pcl.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-  pcl.setAttribute('href', '#/cat/' + category);
-  pcl.onclick = null; // importante
-}
+    var pcl = document.getElementById('product-category-link');
+    if (pcl) {
+        pcl.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+        pcl.onclick = function() { showCategory(category); };
+    }
     var pb = document.getElementById('product-breadcrumb');
     if (pb) pb.textContent = product.name;
     
@@ -2105,8 +2115,8 @@ if (pcl) {
         '</div>' +
         '<div style="display:flex;align-items:center;gap:1rem;">' +
             '<button class="btn-primary" onclick="addProductToCart()" style="font-size:1.6rem;padding:1.5rem 3rem;touch-action:manipulation;"><i class="fa-solid fa-basket-shopping" style="margin-right:.5rem;"></i>Agregar al Carrito</button>' +
-            '<a class="btn-secondary" href="#/cat/' + category + '" style="touch-action:manipulation;">Volver</a>' +
-            '</div>';
+            '<button class="btn-secondary" onclick="goBackToCategory()" style="touch-action:manipulation;">Volver</button>' +
+        '</div>';
     
     if (existingButtonsDiv) productInfoDiv.replaceChild(newButtonsDiv, existingButtonsDiv);
     else productInfoDiv.appendChild(newButtonsDiv);
