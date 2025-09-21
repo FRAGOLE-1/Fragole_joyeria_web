@@ -864,7 +864,7 @@ const products = {
             "img/ARETES/Fragole Onde_1.png",
             
         ],
-        image: "img/FRAGOLE Onde.jpeg",
+        image: "img/Fragole Onde.jpeg",
         description: "Delicados aretes con forma de onda. Acero inoxidable" 
     },
     { 
@@ -987,7 +987,7 @@ const products = {
             "img/ARETES/Fragole chic_1.png",
             "img/ARETES/Fragole chic_2.png"
         ],
-        image: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%23f0f0f0' width='300' height='300'/><polygon points='150,110 160,140 190,140 170,160 180,190 150,170 120,190 130,160 110,140 140,140' fill='%23c4a484'/><text x='150' y='250' text-anchor='middle' font-size='16' fill='%23666'>Estrella</text></svg>",
+        image: "img/ARETES/Fragole chic.jpeg",
         description: "Aretes con forma de corbata que brillan con cada movimiento. Acero inoxidable." 
     },
     { 
@@ -1002,7 +1002,7 @@ const products = {
             "img/ARETES/Fragole Natura_2.jpeg",
             "img/ARETES/Fragole Natura_3.jpeg"
         ],
-        image: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%23f0f0f0' width='300' height='300'/><ellipse cx='150' cy='150' rx='25' ry='40' fill='%23c4a484'/><text x='150' y='250' text-anchor='middle' font-size='16' fill='%23666'>Gota</text></svg>",
+        image:  "img/ARETES/Fragole Natura.jpeg",
         description: "Elegantes aretes en forma de hojao. Clásicos y sofisticados. Xuping Bañado en Oro" 
     },
     { 
@@ -1028,7 +1028,7 @@ const products = {
         discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Palma.jpeg",
-            "img/ARETES/Fragole Palma_1.jpeg",
+            "img/ARETES/Fragole Palma_1.jpeg"
         ],
         image: "img/ARETES/Fragole Palma.jpeg",
         description: "Elegantes aretes en hoja de palmeras. Acero Inoxidable." 
@@ -1106,7 +1106,7 @@ const products = {
             "img/ARETES/Fragole Fiocco.jpeg",
             "img/ARETES/Fragole Ficco_1.jpeg"
         ],
-        image: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%23f0f0f0' width='300' height='300'/><ellipse cx='150' cy='150' rx='25' ry='40' fill='%23c4a484'/><text x='150' y='250' text-anchor='middle' font-size='16' fill='%23666'>Gota</text></svg>",
+        image: "img/ARETES/Fragole Fiocco_2.jpeg",
         description: "Elegantes aretes en forma moño nacar blanco. Acero inoxidable." 
     },
     { 
