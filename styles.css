@@ -977,3 +977,38 @@ html, body {
 .slider, .carousel {
   touch-action: pan-y;   /* respeta scroll vertical y no pelea con el “back” del borde */
 }
+/* === Navegación y gestos (patch final) === */
+
+/* 1) Deja libres los gestos nativos del navegador */
+html, body {
+  touch-action: auto;
+  overscroll-behavior: auto;
+}
+
+/* 2) El carrusel no pelea con el gesto horizontal del sistema */
+.product-image-carousel .carousel-container,
+.product-image-carousel .carousel-track,
+.slider, .carousel {
+  touch-action: pan-y; /* permite scroll vertical, no captura el edge-swipe */
+}
+
+/* 3) El overlay del drawer no intercepta toques cuando está oculto */
+.drawer-overlay { pointer-events: none; }
+.drawer-overlay.show { pointer-events: auto; }
+
+/* 4) Si convertiste categorías en <a class="card-category" ...> quita subrayado/azul */
+.card-category,
+.card-category:link,
+.card-category:visited {
+  text-decoration: none;
+  color: inherit;
+  display: flex; /* ya tienes flex en la clase; esto asegura que aplique también al <a> */
+}
+
+/* (Opcional) 5) Si alguna sección queda pegada al borde, reserva un gutter en móvil */
+/* Descomenta si lo necesitas:
+@media (max-width: 768px){
+  .main-content { padding-left: 12px; padding-right: 12px; }
+}
+*/
+

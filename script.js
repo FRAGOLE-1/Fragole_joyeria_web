@@ -1867,7 +1867,7 @@ function generateProductHTML(product, showAddToCart) {
     ? '<span class="add-cart" onclick="event.stopPropagation(); addToCart(' + product.id + ', 1)"><i class="fa-solid fa-basket-shopping"></i></span>'
     : '';
 
-  return '<div class="card-product" onclick="showProduct(' + product.id + ')">' +
+  return '<div class="card-product" onclick="location.hash=\'#/producto/' + product.id + '\'">' +
     '<div class="container-img">' +
       '<img src="' + imgSrc + '" alt="' + product.name + '" loading="lazy" decoding="async" />' +
       discountHTML +
@@ -2060,11 +2060,12 @@ function showProduct(productId) {
     var pv = document.getElementById('product-view');
     if (pv) pv.classList.remove('hidden');
     
-    var pcl = document.getElementById('product-category-link');
-    if (pcl) {
-        pcl.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-        pcl.onclick = function() { showCategory(category); };
-    }
+var pcl = document.getElementById('product-category-link');
+if (pcl) {
+  pcl.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+  pcl.setAttribute('href', '#/cat/' + category);
+  pcl.onclick = null; // importante
+}
     var pb = document.getElementById('product-breadcrumb');
     if (pb) pb.textContent = product.name;
     
@@ -2104,8 +2105,8 @@ function showProduct(productId) {
         '</div>' +
         '<div style="display:flex;align-items:center;gap:1rem;">' +
             '<button class="btn-primary" onclick="addProductToCart()" style="font-size:1.6rem;padding:1.5rem 3rem;touch-action:manipulation;"><i class="fa-solid fa-basket-shopping" style="margin-right:.5rem;"></i>Agregar al Carrito</button>' +
-            '<button class="btn-secondary" onclick="goBackToCategory()" style="touch-action:manipulation;">Volver</button>' +
-        '</div>';
+            '<a class="btn-secondary" href="#/cat/' + category + '" style="touch-action:manipulation;">Volver</a>' +
+            '</div>';
     
     if (existingButtonsDiv) productInfoDiv.replaceChild(newButtonsDiv, existingButtonsDiv);
     else productInfoDiv.appendChild(newButtonsDiv);

@@ -33,8 +33,8 @@
 
                    <!-- Menú tradicional (se oculta en móvil) -->
                    <ul class="menu" style="display:flex; align-items:center; gap:1rem; margin:0; padding:0; list-style:none;">
-                       <li><a href="#" onclick="showHome()" style="touch-action: manipulation;">Inicio</a></li>
-                       <li><a href="#" onclick="showAllProducts()" style="touch-action: manipulation;">Todos los Productos</a></li>
+                     <li><a href="#/">Inicio</a></li>
+                     <li><a href="#/todos">Todos los Productos</a></li>
                    </ul>
                </div>
 
@@ -73,9 +73,9 @@
 
      <!-- Enlaces superiores: Inicio, Mostrar Todo, Sobre Nosotros -->
      <nav class="drawer-top-links">
-       <a href="#" onclick="toggleDrawer(false); showHome()">Inicio</a>
-       <a href="#" onclick="toggleDrawer(false); showAllProducts()">Mostrar todo</a>
-       <a href="#sobre-nosotros" onclick="toggleDrawer(false); showHome(); setTimeout(()=>document.getElementById('sobre-nosotros').scrollIntoView({behavior:'smooth'}), 0)">Sobre Nosotros</a>
+       <a href="#/" onclick="toggleDrawer(false)">Inicio</a>
+       <a href="#/todos" onclick="toggleDrawer(false)">Mostrar todo</a>
+       <a href="#/sobre" onclick="toggleDrawer(false)">Sobre Nosotros</a>
      </nav>
 
      <div class="drawer-divider"></div>
@@ -83,8 +83,8 @@
 
      <!-- Categorías -->
      <nav class="drawer-list">
-       <a href="#" onclick="showCategory('aretes'); toggleDrawer(false)">Aretes</a>
-       <a href="#" onclick="showCategory('argollas'); toggleDrawer(false)">Argollas</a>
+       <a href="#/cat/aretes" onclick="toggleDrawer(false)">Aretes</a>
+       <a href="#/cat/argollas" onclick="toggleDrawer(false)">Argollas</a>
        <a href="#" onclick="showCategory('pulseras'); toggleDrawer(false)">Pulseras</a>
        <a href="#" onclick="showCategory('collares'); toggleDrawer(false)">Collares</a>
      </nav>
@@ -97,7 +97,7 @@
            <div class="content-banner">
                <p>FRAGOLE</p>
                <h2>Joyas de Acero Inoxidable</h2> <h2>Chapados en oro</h2>
-               <a href="#" onclick="showAllProducts()">Comprar ahora</a>
+               <a href="#/todos">Comprar ahora</a>
            </div>
        </section>
 
@@ -136,7 +136,7 @@
            <section class="container top-categories">
                <h1 class="heading-1">Mejores Categorías</h1>
                <div class="container-categories">
-                   <div class="card-category" onclick="showCategory('aretes')">
+                   <a class="card-category" href="#/cat/aretes"></a>
                        <p>ARETES</p>
                        <span>Ver más</span>
                    </div>
@@ -182,7 +182,7 @@
        <main class="main-content">
            <div class="container">
                <div class="breadcrumb">
-                   <a href="#" onclick="showHome()">Inicio</a>
+                   <a href="#/">Inicio</a>
                    <span>></span>
                    <span id="category-breadcrumb">Categoría</span>
                </div>
@@ -203,7 +203,8 @@
                <div class="breadcrumb">
                    <a href="#" onclick="showHome()">Inicio</a>
                    <span>></span>
-                   <a href="#" onclick="goBackToCategory()" id="product-category-link">Categoría</a>
+                   <a href="#/cat/aretes" id="product-category-link">Categoría</a> 
+
                    <span>></span>
                    <span id="product-breadcrumb">Producto</span>
                </div>
@@ -225,7 +226,7 @@
                        
                        <div>
                            <button class="btn-primary">Agregar al Carrito</button>
-                           <a href="#" class="btn-secondary" onclick="goBackToCategory()">Volver</a>
+                           <a href="#/cat/aretes" class="btn-secondary" id="product-back-link">Volver</a>
                        </div>
                    </div>
                </div>
