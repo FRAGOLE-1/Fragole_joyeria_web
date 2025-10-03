@@ -826,7 +826,8 @@ const products = {
     { 
         id: 1, 
         name: "Fragole  Intreccio", 
-        price: 68, // EL PRECIO CON DESCUENTO
+
+        originalPrice: 76,// el precio original sin el descuento
 
         images: [
             "img/ARETES/Fragole Intreccio.jpeg",
@@ -839,10 +840,9 @@ const products = {
     { 
         id: 2, 
         name: "Fragole Amore", 
-        price: 63,
-
+   
         originalPrice: 70,// el precio original sin el descuento
-        discount: 10, // para que salgan los descuentos en las imagenes
+    
         images: [
             "img/ARETES/Fragole Amore_1.png",
             "img/ARETES/Fragole Amore_2.png",
@@ -853,9 +853,10 @@ const products = {
     { 
         id: 3, 
         name: "Fragole Onde", 
-        price: 68,
+       
 
-    
+        originalPrice: 76,// el precio original sin el descuento
+     
         images: [
             "img/ARETES/Fragole Onde.jpeg",
             "img/ARETES/Fragole Onde_1.png",
@@ -867,8 +868,9 @@ const products = {
     { 
         id: 4, 
         name: "Fragole perla Mare", 
-        price: 68,
-
+     
+        originalPrice: 75,// el precio original sin el descuento
+      
         images: [
             "img/ARETES/Fragole perla Mare.jpeg",
             "img/ARETES/Fragole perla Mare_1.jpeg",
@@ -882,6 +884,8 @@ const products = {
         name: "Fragole onda de perla", 
         price: 63,
 
+        originalPrice: 70,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             
             "img/ARETES/Fragole onda perla_1.jpeg",
@@ -896,6 +900,8 @@ const products = {
         name: "Fragole Nastro", 
         price: 63,
 
+        originalPrice: 70,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Nastro_2.jpeg",
             "img/ARETES/Fragole Nastro.png",
@@ -910,6 +916,8 @@ const products = {
         name: "Fragole Mini Hoop", 
         price: 59,
 
+        originalPrice: 65,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Mini Hoop_2.jpeg",
             "img/ARETES/Fragole Mini Hoop.jpeg",
@@ -923,6 +931,8 @@ const products = {
         name: "Fragole Ovo", 
         price: 63,
 
+        originalPrice: 70,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Ovo.jpeg",
             "img/ARETES/Fragole Ovo_1.jpeg",
@@ -937,6 +947,8 @@ const products = {
         name: "Fragole Node", 
         price: 63,
 
+        originalPrice: 70,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Node.jpeg",
             "img/ARETES/Fragole Node_1.jpeg"
@@ -950,6 +962,8 @@ const products = {
         name: "Fragole Perla Oceano", 
         price: 63,
 
+        originalPrice: 70,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole perla Oceano.jpeg",
             "img/ARETES/Fragole perla Oceano_1.jpeg",
@@ -963,7 +977,8 @@ const products = {
         name: "Fragole chic", 
         price: 63,
 
-
+        originalPrice: 70,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole chic.jpeg",
             "img/ARETES/Fragole chic_1.png",
@@ -977,6 +992,8 @@ const products = {
         name: "Fragole Natura", 
         price: 86,
 
+        originalPrice: 95,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Natura.jpeg",
             "img/ARETES/Fragole Natura_2.jpeg",
@@ -990,6 +1007,8 @@ const products = {
         name: "Fragole lagrima", 
         price: 63,
 
+        originalPrice: 70,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Lagrima.jpeg",
             "img/ARETES/Fragole Lagrima_1.jpeg"
@@ -1002,7 +1021,8 @@ const products = {
         name: "Fragole Palma", 
         price: 68,
 
- 
+        originalPrice: 75,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Palma.jpeg",
             "img/ARETES/Fragole Palma_1.jpeg"
@@ -1015,6 +1035,8 @@ const products = {
         name: "Fragole Astro", 
         price: 50,
 
+        originalPrice: 55,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Astro.jpeg",
             "img/ARETES/Fragole Astro_1.jpeg",
@@ -1028,6 +1050,8 @@ const products = {
         name: "Faragole Aurea", 
         price: 61,
 
+        originalPrice: 68,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Aurea.jpeg",
             "img/ARETES/Fragole Aurea_1.png",
@@ -1041,6 +1065,8 @@ const products = {
         name: "Fragole Bow", 
         price: 63,
 
+        originalPrice: 70,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Bow.jpeg",
             "img/ARETES/Fragole Bow_1.jpeg",
@@ -1055,6 +1081,8 @@ const products = {
         name: "Fragole Onda", 
         price: 63,
 
+        originalPrice: 70,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Onda.jpeg",
             "img/ARETES/Fragole Onda_1.jpeg",
@@ -1068,6 +1096,8 @@ const products = {
         name: "Fragole Fiocco", 
         price: 68,
 
+        originalPrice: 75,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Fiocco_2.jpeg",
             "img/ARETES/Fragole Fiocco.jpeg",
@@ -1081,6 +1111,8 @@ const products = {
         name: " Set arete de corazón", 
         price: 90,
 
+        originalPrice: 100,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Set de corazones.jpeg",
             "img/ARETES/Set de corazon_1.png",
@@ -1095,6 +1127,8 @@ const products = {
         name: "Arete vc blanco", 
         price: 66,
 
+        originalPrice: 73,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Arete vc blanco.jpeg",
             "img/ARETES/Arete vc blanco_1.jpeg"
@@ -1107,6 +1141,8 @@ const products = {
         name: "Fragole clasico Twist", 
         price: 68,
 
+        originalPrice: 75,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole clasico Twist_1.jpeg",
         ],
@@ -1118,6 +1154,8 @@ const products = {
         name: "Fragole Estela fiorita", 
         price: 70,
 
+        originalPrice: 78,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Estela fiorita.jpeg",
             "img/ARETES/Fragole Estela fiorita_1.png"
@@ -1131,6 +1169,8 @@ const products = {
         name: "Fragole Mirage", 
         price: 68,
 
+        originalPrice: 76,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Mirage.jpeg",
             "img/ARETES/Fragole Mirage_1.jpeg",
@@ -1143,6 +1183,8 @@ const products = {
         name: "Fragole Wave ", 
         price: 68,
 
+        originalPrice: 76,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
              "img/ARETES/Fragole Wave.jpeg",
               "img/ARETES/Fragole Wave_1.jpeg"
@@ -1155,6 +1197,8 @@ const products = {
         name: "Fragole Soleil", 
         price: 68,
 
+        originalPrice: 76,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Solei.png",
             "img/ARETES/Fragole Solei_1.png"
@@ -1167,6 +1211,8 @@ const products = {
         name: "Fragole Eleganza", 
         price: 68,
 
+        originalPrice: 76,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Eleganza.jpeg",
             "img/ARETES/Fragole Eleganza_1.jpeg"
@@ -1179,6 +1225,8 @@ const products = {
         name: "Fragole Serena", 
         price: 63,
 
+        originalPrice: 70,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Serena.jpeg",
             "img/ARETES/Fragole Serena_1.jpeg"
@@ -1192,6 +1240,8 @@ const products = {
         name: "Fragole Luna Bold", 
         price: 68,
 
+        originalPrice: 76,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole luna Bold.png",
             "img/ARETES/Fragole luna Bold_1.png"
@@ -1204,6 +1254,8 @@ const products = {
         name: "Fragole Crescent Aura", 
         price: 68,
 
+        originalPrice: 76,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Crescent Aura.png",
             "img/ARETES/Fragole Crescent Aura_1.png"
@@ -1218,6 +1270,8 @@ const products = {
         name: "Fragole Doric", 
         price: 68,
 
+        originalPrice: 76,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Doric.jpeg",
             "img/ARETES/Fragole Doric_2.jpeg"
@@ -1232,6 +1286,8 @@ const products = {
         name: "Fragole Solaris", 
         price: 68,
 
+        originalPrice: 76,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/ARETES/Fragole Solaris.jpeg",
             "img/ARETES/Fragole Solaris_1.jpeg"
@@ -1266,6 +1322,8 @@ const products = {
         name: "Anillo Sirena", 
         price: 50,
 
+        originalPrice: 55,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/anillos/Anillo Sirena.jpeg",
             "img/anillos/Anillo Sirena_1.jpeg"
@@ -1279,6 +1337,8 @@ const products = {
         name: "Anillo Eslabon Plateado", 
         price: 50,
 
+        originalPrice: 55,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/anillos/Anillo Eslabon Plateado.jpeg"
         ],
@@ -1304,7 +1364,20 @@ const products = {
         image:"img/PULSERA_SOULT OUT.jpeg",
         description: "Elegantes pulsera con perlas. Clásicos y sofisticados." 
         },
-       
+        { 
+        id: 37, 
+        name: "Pulsera Fragole", 
+        price: 63,
+
+        originalPrice: 70,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
+        images: [
+            "img/PULSERA_SOULT OUT.jpeg",
+        ],
+        image:"img/PULSERA_SOULT OUT.jpeg",
+        description: "pulsera dorada. Acero inoxidable" 
+        },
+    
     //----------------COLLARES---------------------------------
     //---------------------------------------------------------
     ],
@@ -1314,6 +1387,8 @@ const products = {
         name: "Collar Bioquimico ", 
         price: 83,
 
+        originalPrice: 92,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/COLLARES/Collar bioquimico.jpeg",
             "img/COLLARES/Collar bioquimico_1.jpeg"
@@ -1328,6 +1403,8 @@ const products = {
         name: "Fragole Mare", 
         price: 86,
 
+        originalPrice: 95,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/COLLARES/Collar Mare.jpeg",
             "img/COLLARES/Collar Mare_1.jpeg",
@@ -1341,6 +1418,8 @@ const products = {
         name: "Fragole Angel", 
         price: 81,
 
+        originalPrice: 90,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/COLLARES/Fragole Angel.jpeg",
             "img/COLLARES/Fragole Angel_1.jpeg",
@@ -1354,6 +1433,8 @@ const products = {
         name: "Fragole Oceano", 
         price: 95,
 
+        originalPrice: 95,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
         images: [
             "img/COLLARES/Fragole oceano.jpeg",
             "img/COLLARES/Fragole oceano_1.jpeg"
