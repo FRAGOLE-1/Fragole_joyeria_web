@@ -1364,7 +1364,7 @@ const products = {
         id: 41, 
         name: "Fragole Oceano", 
 
-        originalPrice: 95,// el precio original sin el descuento
+        price: 95,
         images: [
             "img/COLLARES/Fragole oceano.jpeg",
             "img/COLLARES/Fragole oceano_1.jpeg"
