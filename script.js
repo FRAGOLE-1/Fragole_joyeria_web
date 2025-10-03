@@ -839,8 +839,10 @@ const products = {
     { 
         id: 2, 
         name: "Fragole Amore", 
-        price: 70,
+        price: 66.50,
 
+        originalPrice: 70,// el precio original sin el descuento
+        discount: 10, // para que salgan los descuentos en las imagenes
     
         images: [
             "img/ARETES/Fragole Amore_1.png",
